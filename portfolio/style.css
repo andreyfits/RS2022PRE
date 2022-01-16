@@ -3,29 +3,30 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-    /*========== Colors ==========*/
-    --title-color: #0B0A0A;
-    --text-color: #fff;
-    --text-color-gold: #bdae82;
-    --body-color: #000;
+    /*==================== Colors ====================*/
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #bdae82;
 
-    /*========== Font and typography ==========*/
+    /*==================== Font and typography ====================*/
     --body-font: 'Inter', sans-serif;
+    --additional-font: 'Merriweather', serif;
+    --font-size: 20px;
+    --small-font-size: 18px;
     --h1-font-size: 60px;
     --h2-font-size: 40px;
     --h3-font-size: 28px;
-    --normal-font-size: 18px;
-    --large-font-size: 20px;
 
-    /*========== Font weight ==========*/
+    /*==================== Font weight ====================*/
     --font-normal: 400;
     --font-bold: 700;
 
-    --transition-slower: var(--transition-slower);
+    /*==================== Transition ====================*/
+    --transition-slower: .3s;
     --transition-normal: 1s;
 }
 
-/*========== BASE ==========*/
+/*==================== BASE ====================*/
 * {
     box-sizing: border-box;
     padding: 0;
@@ -37,20 +38,19 @@ html {
     scroll-behavior: smooth;
 }
 
-/*========== Classes modified to reduce size and print on A4 sheet ==========*/
+/*==================== Classes modified to reduce size ====================*/
 body {
-    background-color: var(--body-color);
+    background-color: var(--color-black);
     font-family: 'Inter', sans-serif;
-    font-size: var(--normal-font-size);
+    font-size: var(--small-font-size);
     line-height: 2;
-    color: var(--text-color);
+    color: var(--color-white);
 }
 
-/*========== CLASS CSS ==========*/
-
+/*==================== CLASS CSS ====================*/
 .header {
     width: 100%;
-    background-color: var(--body-color);
+    background-color: var(--color-black);
     margin: 0 auto;
 }
 
@@ -96,8 +96,8 @@ body {
 .nav-link {
     display: block;
     padding: 0 30px;
-    color: var(--text-color);
-    font-size: var(--large-font-size);
+    color: var(--color-white);
+    font-size: var(--font-size);
     line-height: 50px;
     text-decoration: none;
     transition: var(--transition-slower);
@@ -108,14 +108,14 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--text-color-gold);
+    color: var(--color-gold);
 }
 
 .switch-lang {
     position: absolute;
     right: 20px;
     top: 20px;
-    font-size: var(--large-font-size);
+    font-size: var(--font-size);
     line-height: 50px;
 }
 
@@ -134,17 +134,17 @@ body {
 }
 
 .lang-active {
-    color: var(--text-color-gold);
+    color: var(--color-gold);
 }
 
 .lang-active:hover {
-    color: var(--text-color-gold);
+    color: var(--color-gold);
 }
 
-/*========== HERO ==========*/
+/*==================== HERO ====================*/
 .hero {
-    background-color: var(--body-color);
-    color: var(--text-color);
+    background-color: var(--color-black);
+    color: var(--color-white);
     margin: 0 auto;
     transition: var(--transition-normal);
 }
@@ -166,14 +166,14 @@ body {
 }
 
 .hero-title {
-    font-family: 'Merriweather', serif;
-    font-size: 60px;
+    font-family: var(--additional-font);
+    font-size: var(--h1-font-size);
     font-weight: var(--font-bold);
     padding-bottom: 10px;
 }
 
 .hero-text {
-    font-size: var(--large-font-size);
+    font-size: var(--font-size);
     max-width: 470px;
     padding-bottom: 25px;
 }
@@ -182,24 +182,24 @@ body {
     width: 220px;
     height: 55px;
     font-family: inherit;
-    font-size: var(--large-font-size);
+    font-size: var(--font-size);
     border: 0;
-    color: var(--body-color);
-    background-color: var(--text-color-gold);
+    color: var(--color-black);
+    background-color: var(--color-gold);
     cursor: pointer;
     transition: var(--transition-slower);
 }
 
 .button:hover {
-    color: var(--text-color);
+    color: var(--color-white);
 }
 
-/*========== SKILLS ==========*/
+/*==================== SKILLS ====================*/
 .section-title {
     width: 50%;
-    font-family: 'Merriweather', serif;
+    font-family: var(--additional-font);
     font-size: var(--h2-font-size);
-    color: var(--text-color-gold);
+    color: var(--color-gold);
     margin: 100px auto 60px;
     text-align: center;
     font-weight: var(--font-bold);
@@ -222,7 +222,7 @@ body {
 }
 
 .section-title span {
-    background-color: var(--body-color);
+    background-color: var(--color-black);
     padding: 20px;
 }
 
@@ -260,7 +260,7 @@ body {
 }
 
 .skill-title {
-    font-size: var(--large-font-size);
+    font-size: var(--font-size);
     font-weight: var(--font-bold);
     text-align: center;
     padding-bottom: 20px;
@@ -282,9 +282,9 @@ body {
 
 .portfolio-button {
     width: 220px;
-    color: var(--text-color-gold);
-    background-color: var(--body-color);
-    border: 2px solid var(--text-color-gold);
+    color: var(--color-gold);
+    background-color: var(--color-black);
+    border: 2px solid var(--color-gold);
     transition: var(--transition-slower);
 }
 
@@ -293,12 +293,12 @@ body {
 }
 
 .portfolio-button-active {
-    color: var(--body-color);
-    background-color: var(--text-color-gold);
+    color: var(--color-black);
+    background-color: var(--color-gold);
 }
 
 .portfolio-button-active:hover {
-    color: var(--text-color);
+    color: var(--color-white);
 }
 
 .portfolio-items {
