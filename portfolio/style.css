@@ -6,7 +6,7 @@
     /*========== Colors ==========*/
     --title-color: #0B0A0A;
     --text-color: #fff;
-    --text-color-active-hover: #bdae82;
+    --text-color-gold: #bdae82;
     --body-color: #000;
 
     /*========== Font and typography ==========*/
@@ -20,6 +20,9 @@
     /*========== Font weight ==========*/
     --font-normal: 400;
     --font-bold: 700;
+
+    --transition-slower: var(--transition-slower);
+    --transition-normal: 1s;
 }
 
 /*========== BASE ==========*/
@@ -70,7 +73,7 @@ body {
     height: 50px;
     background: url("./assets/svg/logo.svg") no-repeat;
     background-size: contain;
-    transition: .3s;
+    transition: var(--transition-slower);
 }
 
 .logo:hover {
@@ -96,7 +99,7 @@ body {
     font-size: var(--large-font-size);
     line-height: 50px;
     text-decoration: none;
-    transition: .3s;
+    transition: var(--transition-slower);
 }
 
 .nav-link:last-child {
@@ -104,7 +107,7 @@ body {
 }
 
 .nav-link:hover {
-    color: var(--text-color-active-hover);
+    color: var(--text-color-gold);
 }
 
 .switch-lang {
@@ -121,7 +124,7 @@ body {
     text-align: center;
     font-weight: var(--font-bold);
     cursor: pointer;
-    transition: .3s;
+    transition: var(--transition-slower);
 }
 
 .ru:hover,
@@ -130,9 +133,61 @@ body {
 }
 
 .lang-active {
-    color: var(--text-color-active-hover);
+    color: var(--text-color-gold);
 }
 
 .lang-active:hover {
-    color: var(--text-color-active-hover);
+    color: var(--text-color-gold);
+}
+
+.hero {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    margin: 0 auto;
+    transition: var(--transition-normal);
+}
+
+.hero .container {
+    height: 820px;
+    padding-top: 160px;
+    background-image: url("./assets/img/header-bg.jpg");
+    background-position: center -90px;
+    background-repeat: no-repeat;
+    transition: var(--transition-normal);
+}
+
+.hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 60px;
+}
+
+.hero-title {
+    font-family: 'Merriweather', serif;
+    font-size: 60px;
+    font-weight: var(--font-bold);
+    padding-bottom: 10px;
+}
+
+.hero-text {
+    font-size: var(--large-font-size);
+    max-width: 470px;
+    padding-bottom: 25px;
+}
+
+.btn {
+    width: 220px;
+    height: 55px;
+    font-family: inherit;
+    font-size: var(--large-font-size);
+    border: 0;
+    color: var(--body-color);
+    background-color: var(--text-color-gold);
+    cursor: pointer;
+    transition: var(--transition-slower);
+}
+
+.btn:hover {
+    color: var(--text-color);
 }
