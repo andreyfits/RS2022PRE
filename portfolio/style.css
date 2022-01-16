@@ -47,6 +47,7 @@ body {
 }
 
 /*========== CLASS CSS ==========*/
+
 .header {
     width: 100%;
     background-color: var(--body-color);
@@ -140,6 +141,7 @@ body {
     color: var(--text-color-gold);
 }
 
+/*========== HERO ==========*/
 .hero {
     background-color: var(--body-color);
     color: var(--text-color);
@@ -190,4 +192,81 @@ body {
 
 .btn:hover {
     color: var(--text-color);
+}
+
+/*========== SKILLS ==========*/
+.section-title {
+    width: 50%;
+    font-family: 'Merriweather', serif;
+    font-size: var(--h2-font-size);
+    color: var(--text-color-gold);
+    margin: 100px auto 60px;
+    text-align: center;
+    font-weight: var(--font-bold);
+    background-image: linear-gradient(to top, #000 39px, #bdae82 39px, #bdae82 41px, #000 41px);
+}
+
+.section-title::before, .section-title::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+}
+
+.section-title::before {
+    margin-left: -25%;
+}
+.section-title::after {
+    margin-right: -25%;
+}
+
+.section-title span {
+    background-color: var(--body-color);
+    padding: 20px;
+}
+
+.skills-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skill-item {
+    width: 320px;
+    padding: 100px 20px 10px;
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.skill-item:nth-child(1) {
+    background-image: url("./assets/svg/camera.svg");
+    background-size: 62px 50px;
+}
+
+.skill-item:nth-child(2) {
+    background-image: url("./assets/svg/video.svg");
+    background-size: 60px 50px;
+}
+
+.skill-item:nth-child(3) {
+    background-image: url("./assets/svg/image.svg");
+    background-size: 66px 50px;
+}
+
+.skill-item:nth-child(4) {
+    background-image: url("./assets/svg/microphone.svg");
+    background-size: 32px 50px;
+}
+
+.skill-title {
+    font-size: var(--large-font-size);
+    font-weight: var(--font-bold);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.skill-text {
+    text-align: center;
+    margin: 0 auto;
 }
