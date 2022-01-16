@@ -178,7 +178,7 @@ body {
     padding-bottom: 25px;
 }
 
-.btn {
+.button {
     width: 220px;
     height: 55px;
     font-family: inherit;
@@ -190,7 +190,7 @@ body {
     transition: var(--transition-slower);
 }
 
-.btn:hover {
+.button:hover {
     color: var(--text-color);
 }
 
@@ -269,4 +269,47 @@ body {
 .skill-text {
     text-align: center;
     margin: 0 auto;
+}
+
+/*==================== PORTFOLIO ====================*/
+.portfolio-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 60px;
+}
+
+.portfolio-button {
+    width: 220px;
+    color: var(--text-color-gold);
+    background-color: var(--body-color);
+    border: 2px solid var(--text-color-gold);
+    transition: var(--transition-slower);
+}
+
+.portfolio-button:hover {
+    color: #737373;
+}
+
+.portfolio-button-active {
+    color: var(--body-color);
+    background-color: var(--text-color-gold);
+}
+
+.portfolio-button-active:hover {
+    color: var(--text-color);
+}
+
+.portfolio-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.portfolio-img {
+    width: 450px;
+    height: 560px;
+    object-fit: contain;
 }
