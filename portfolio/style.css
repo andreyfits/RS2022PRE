@@ -1,0 +1,138 @@
+/*===== GOOGLE FONTS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Merriweather:wght@400;700&display=swap');
+
+/*===== VARIABLES CSS =====*/
+:root {
+    /*========== Colors ==========*/
+    --title-color: #0B0A0A;
+    --text-color: #fff;
+    --text-color-active-hover: #bdae82;
+    --body-color: #000;
+
+    /*========== Font and typography ==========*/
+    --body-font: 'Inter', sans-serif;
+    --h1-font-size: 60px;
+    --h2-font-size: 40px;
+    --h3-font-size: 28px;
+    --normal-font-size: 18px;
+    --large-font-size: 20px;
+
+    /*========== Font weight ==========*/
+    --font-normal: 400;
+    --font-bold: 700;
+}
+
+/*========== BASE ==========*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*========== Classes modified to reduce size and print on A4 sheet ==========*/
+body {
+    background-color: var(--body-color);
+    font-family: 'Inter', sans-serif;
+    font-size: var(--normal-font-size);
+    line-height: 2;
+    color: var(--text-color);
+}
+
+/*========== CLASS CSS ==========*/
+.header {
+    width: 100%;
+    background-color: var(--body-color);
+    margin: 0 auto;
+}
+
+.container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 120px 20px 20px;
+    background: url("./assets/img/header-bg.jpg") no-repeat center 0;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url("./assets/svg/logo.svg") no-repeat;
+    background-size: contain;
+    transition: .3s;
+}
+
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.nav {
+    margin-left: auto;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.nav-link {
+    display: block;
+    padding: 0 30px;
+    color: var(--text-color);
+    font-size: var(--large-font-size);
+    line-height: 50px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-link:last-child {
+    padding-right: 0;
+}
+
+.nav-link:hover {
+    color: var(--text-color-active-hover);
+}
+
+.switch-lang {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: var(--large-font-size);
+    line-height: 50px;
+}
+
+.lang {
+    display: inline-block;
+    min-width: 15px;
+    text-align: center;
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.ru:hover,
+.en:hover {
+    color: #737373;
+}
+
+.lang-active {
+    color: var(--text-color-active-hover);
+}
+
+.lang-active:hover {
+    color: var(--text-color-active-hover);
+}
