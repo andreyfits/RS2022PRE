@@ -363,3 +363,69 @@ body {
     margin: 0 auto;
     transition: var(--transition-slower);
 }
+
+/*==================== CONTACTS ====================*/
+.contacts {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.contacts .container {
+    min-height: 700px;
+    padding-top: 60px;
+    padding-right: 20px;
+    background-size: auto 700px;
+    background: url('./assets/img/contacts-bg.jpg') center center;
+}
+
+.contacts-container {
+    width: 450px;
+    margin-left: auto;
+}
+
+.contacts-title {
+    min-height: 80px;
+    font-family: var(--additional-font);
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-bold);
+    color: var(--color-gold);
+    margin-bottom: 40px;
+}
+
+input[type='email'],
+input[type='tel'] {
+    width: 450px;
+    height: 50px;
+    color: var(--color-gold);
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    font-size: var(--font-size);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-gold);
+}
+
+textarea {
+    width: 450px;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+    resize: none;
+    color: var(--color-gold);
+    font-size: var(--font-size);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid var(--color-gold);
+}
+
+::placeholder {
+    font-family: inherit;
+    color: var(--color-gold);
+    font-size: var(--font-normal);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-text-fill-color: #bdae82;
+    transition: background-color 0s ease-in-out 9000s;
+}
