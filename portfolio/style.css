@@ -40,6 +40,7 @@ html {
 
 /*==================== Classes modified to reduce size ====================*/
 body {
+    min-width: 320px;
     background-color: var(--color-black);
     font-family: 'Inter', sans-serif;
     font-size: var(--small-font-size);
@@ -55,7 +56,7 @@ body {
 }
 
 .container {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -428,4 +429,97 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     -webkit-text-fill-color: #bdae82;
     transition: background-color 0s ease-in-out 9000s;
+}
+
+/*==================== FOOTER ====================*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: var(--font-size);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    max-width: 1440px;
+    width: calc(100% - 40px);
+}
+
+.footer-data {
+    display: flex;
+    align-items: center;
+    min-height: 50px;
+}
+
+.copyright {
+    padding-right: 20px;
+    line-height: 50px;
+}
+
+.year {
+    line-height: 50px;
+}
+
+.github-username,
+.rss {
+    color: var(--color-white);
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 20px;
+    transition: var(--transition-slower);
+}
+
+.github-username:hover,
+.rss:hover {
+    color: var(--color-gold);
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    min-height: 50px;
+}
+
+.social-item {
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: var(--transition-slower);
+}
+
+.social-item:hover,
+.social-item:active {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.social-item a {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+.facebook {
+    background-image: url('assets/svg/facebook.svg');
+}
+
+.instagram {
+    background-image: url('assets/svg/instagram.svg');
+}
+
+.twitter {
+    background-image: url('assets/svg/twitter.svg');
+}
+
+.pinterest {
+    background-image: url('assets/svg/pinterest.svg');
 }
