@@ -316,6 +316,51 @@ body {
     object-fit: contain;
 }
 
+/*==================== VIDEO ====================*/
+.video-player {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1400px;
+    height: 705px;
+}
+
+.play-button {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    z-index: 2;
+    background-image: url("./assets/svg/play-button.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.play-button:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)
+    contrast(87%);
+}
+
+.video-bg {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    background-image: url('./assets/img/video-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
 /*==================== PRICE ====================*/
 .price {
     padding-bottom: 100px;
