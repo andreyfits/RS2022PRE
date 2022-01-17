@@ -333,6 +333,8 @@ body {
     width: 150px;
     height: 150px;
     z-index: 2;
+    border: none;
+    background-color: transparent;
     background-image: url("./assets/svg/play-button.svg");
     background-size: contain;
     background-repeat: no-repeat;
