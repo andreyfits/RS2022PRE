@@ -544,7 +544,6 @@ input:-webkit-autofill:active {
     height: 32px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
     transition: var(--transition-slower);
 }
 
