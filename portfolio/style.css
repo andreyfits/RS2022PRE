@@ -446,10 +446,12 @@ input[type='email'],
 input[type='tel'] {
     width: 450px;
     height: 50px;
-    color: var(--color-gold);
     margin-bottom: 20px;
-    padding: 5px 20px;
+    padding: 3px 18px;
+    font-family: inherit;
     font-size: var(--font-size);
+    line-height: 40px;
+    color: var(--color-gold);
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid var(--color-gold);
 }
@@ -457,19 +459,21 @@ input[type='tel'] {
 textarea {
     width: 450px;
     height: 100px;
-    margin-bottom: 20px;
-    padding: 5px 20px;
+    margin-bottom: 18px;
+    padding: 3px 18px;
     resize: none;
-    color: var(--color-gold);
+    font-family: inherit;
     font-size: var(--font-size);
+    line-height: 40px;
+    color: var(--color-gold);
     background-color: rgba(0, 0, 0, 0.5);
     border: 2px solid var(--color-gold);
 }
 
 ::placeholder {
     font-family: inherit;
-    color: var(--color-gold);
     font-size: var(--font-normal);
+    color: var(--color-gold);
 }
 
 input:-webkit-autofill,
