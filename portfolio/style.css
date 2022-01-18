@@ -336,7 +336,6 @@ body {
     border: none;
     background-color: transparent;
     background-image: url("./assets/svg/play-button.svg");
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     cursor: pointer;
