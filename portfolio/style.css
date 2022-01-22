@@ -132,7 +132,7 @@ body {
 
 .ru:hover,
 .en:hover {
-    color: #737373;
+    color: var(--color-gold);
 }
 
 .lang-active {
@@ -293,7 +293,7 @@ body {
 }
 
 .portfolio-button:hover {
-    color: #737373;
+    color: var(--color-white);
 }
 
 .portfolio-button-active {
