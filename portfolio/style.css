@@ -11,6 +11,7 @@
     /*==================== Font and typography ====================*/
     --body-font: 'Inter', sans-serif;
     --additional-font: 'Merriweather', serif;
+    --font-menu: 400 35px 'Inter', sans-serif;
     --font-size: 20px;
     --small-font-size: 18px;
     --line-height: 2;
@@ -575,6 +576,47 @@ input:-webkit-autofill:active {
     background-image: url('assets/svg/pinterest.svg');
 }
 
+/*========== ADAPTIVE MENU ==========*/
+.toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    gap: 9px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.toggle span {
+    width: 100%;
+    height: 3px;
+    background: var(--color-white);
+    z-index: 4;
+    transition: all var(--transition-slower) ease-in-out;
+}
+
+.toggle.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle.open .line:nth-child(1) {
+    -webkit-transform: translateY(12px) rotate(45deg);
+    -ms-transform: translateY(12px) rotate(45deg);
+    -o-transform: translateY(12px) rotate(45deg);
+    transform: translateY(12px) rotate(45deg);
+    width: 60px;
+}
+
+.toggle.open .line:nth-child(3) {
+    -webkit-transform: translateY(-12px) rotate(-45deg);
+    -ms-transform: translateY(-12px) rotate(-45deg);
+    -o-transform: translateY(-12px) rotate(-45deg);
+    transform: translateY(-12px) rotate(-45deg);
+    width: 60px;
+}
+
 /*========== MEDIA QUERIES ==========*/
 @media (max-width: 1440px) {
     .skills-items,
@@ -628,5 +670,76 @@ input:-webkit-autofill:active {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none;
+    }
+
+    .toggle {
+        display: flex;
+    }
+
+    .header-container {
+        padding-right: 64px;
+        padding-left: 60px;
+        background-position: -5px -30px;
+        background-size: auto 620px;
+    }
+
+    .switch-lang {
+        right: 134px;
+    }
+
+    .lang:nth-child(3) {
+        padding-left: 14px;
+    }
+
+    .show {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .show.hide {
+        display: none;
+    }
+
+    .nav.open {
+        display: flex;
+        position: absolute;
+        padding-top: 134px;
+        padding-left: 127px;
+        top: 0;
+        right: 0;
+        width: 620px;
+        height: 1024px;
+        z-index: 2;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        transition: 1s;
+    }
+
+    .nav-list.open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 150px;
+        height: 400px;
+        color: var(--color-white);
+    }
+
+    .nav-link {
+        padding: 0;
+        margin-bottom: 16px;
+        font: var(--font-menu);
+        line-height: 73px;
     }
 }
