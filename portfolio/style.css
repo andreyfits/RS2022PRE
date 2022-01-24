@@ -674,10 +674,6 @@ input:-webkit-autofill:active {
 }
 
 @media (max-width: 768px) {
-    /*.nav {*/
-    /*    display: none;*/
-    /*}*/
-
     .toggle {
         display: flex;
     }
@@ -747,5 +743,33 @@ input:-webkit-autofill:active {
         padding-left: 127px;
         padding-bottom: 16px;
         line-height: 73px;
+    }
+
+    .hero .container {
+        height: 590px;
+        background-position: -5px -120px;
+        background-size: auto 620px;
+        padding-left: 60px;
+        padding-top: 78px;
+    }
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        line-height: 64px;
+        padding-bottom: 20px;
+    }
+
+    .hero-text {
+        max-width: 390px;
+        padding-bottom: 60px;
+        line-height: 24px;
     }
 }
