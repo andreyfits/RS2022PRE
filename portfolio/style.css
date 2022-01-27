@@ -42,7 +42,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/*==================== Classes modified to reduce size ====================*/
 body {
     min-width: 320px;
     display: flex;
@@ -151,6 +150,7 @@ body {
 }
 
 .hero-text {
+    font: var(--font-text);
     padding: 10px 20px 25px 0;
 }
 
@@ -452,7 +452,7 @@ input[type='email'],
 input[type='tel'] {
     height: 50px;
     font: inherit;
-    padding: 2px 0 0 18px;
+    padding: 2px 0 0 3px;
     border: 2px solid var(--color-gold);
     outline: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -471,13 +471,13 @@ textarea {
     height: 100px;
     font: inherit;
     margin-bottom: 10px;
-    padding: 2px 0 0 18px;
+    padding: 2px 0 0 2px;
     border: 2px solid var(--color-gold);
     outline: 0;
     background: rgba(0, 0, 0, 0.5);
     color: var(--color-gold);
     resize: none;
-    transition: 0.5s;
+    transition: var(--slower);
 }
 
 input[type='email']:focus,
@@ -564,40 +564,6 @@ textarea:focus {
 }
 
 /*==================== MEDIA QUERIES ====================*/
-
-@media (max-width: 920px) {
-    .hero .container {
-        padding-top: 60px;
-        height: 590px;
-    }
-
-    .hero-title {
-        font-size: 40px;
-    }
-
-    .contacts-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-
-    textarea {
-        margin-bottom: 30px;
-    }
-
-    .contacts-button {
-        margin: 0 auto;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
 @media (max-width: 768px) {
     :root {
         --font-h1: normal 400 32px/64px 'Merriweather', serif;
@@ -609,7 +575,8 @@ textarea:focus {
     }
 
     .header {
-        background: url('assets/img/header-bg-mobile.jpg') no-repeat center 0;
+        background-position: -5px -30px;
+        background-size: auto 620px;
     }
 
     .header-container {
@@ -707,5 +674,151 @@ textarea:focus {
         transform: translate(-9px, -17px) rotate(-45deg);
         width: 69px;
         height: 2px;
+    }
+
+    .main-container {
+        gap: 10px;
+    }
+
+    .hero-container {
+        height: 590px;
+        background-position: -5px -120px;
+        background-size: auto 620px;
+    }
+
+    .hero {
+        width: 420px;
+        margin: 78px 0 0 40px;
+    }
+
+    .hero-text {
+        padding: 20px 0 59px 0;
+    }
+
+    .skills-container {
+        gap: 65px;
+    }
+
+    .skill-items {
+        justify-content: center;
+        row-gap: 65px;
+    }
+
+    .skill-item {
+        width: 300px;
+    }
+
+    .skill-title {
+        padding-top: 80px;
+    }
+
+    .skill-text {
+        padding: 0 10px;
+    }
+
+    .portfolio-container {
+        padding-top: 160px;
+    }
+
+    .portfolio-buttons {
+        padding-top: 10px;
+    }
+
+    .video-container {
+        padding: 90px 0;
+    }
+
+    .video-player {
+        padding-top: 10px;
+    }
+
+    .video-player-image {
+        display: none;
+    }
+
+    .video-player-image-mobile {
+        display: block;
+    }
+
+    .play-button {
+        background-image: url('assets/svg/play-button-mobile.svg');
+        width: 75px;
+        height: 75px;
+    }
+
+    .price-items {
+        padding-top: 10px;
+        gap: 50px;
+    }
+
+    .price-item {
+        width: 420px;
+    }
+
+    .contacts-container {
+        height: 680px;
+        padding-top: 80px;
+        justify-content: center;
+        background: url('assets/img/contacts-bg-mobile.jpg') no-repeat center 70px;
+    }
+
+    .contacts-title {
+        text-align: center;
+        padding-bottom: 35px;
+    }
+
+    .contacts-button {
+        align-self: center;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        padding: 30px;
+        gap: 30px;
+    }
+
+    .footer-data {
+        padding: 0;
+    }
+
+    .copyright,
+    .year,
+    .github,
+    .link {
+        line-height: 0;
+    }
+
+    .rss-link {
+        padding: 0;
+    }
+}
+
+@media (max-width: 620px) {
+    .nav.open {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container-title {
+        width: 75%;
+    }
+
+    .price-item {
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .switch-lang {
+        padding-right: 0;
+    }
+
+    .skill-item {
+        width: 100%;
+    }
+
+    .contacts {
+        width: 300px;
     }
 }
