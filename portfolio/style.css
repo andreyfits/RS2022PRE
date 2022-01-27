@@ -811,7 +811,7 @@ textarea:focus {
 
 @media (max-width: 340px) {
     .switch-lang {
-        padding-right: 0;
+        padding-right: 15px;
     }
 
     .skill-item {
