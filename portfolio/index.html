@@ -35,8 +35,8 @@
             </ul>
         </nav>
         <div class="switch-lang">
-            <span class="lang lang-active en">en</span>
-            <span class="lang"> / </span>
+            <span class="lang-active en">en</span>
+            <span class="dash"> / </span>
             <span class="lang ru">ru</span>
         </div>
         <div class="toggle">
@@ -47,28 +47,26 @@
     </div>
 </header>
 <main class="main">
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
+    <div class="container main-container">
+        <section class="section hero-container">
+            <div class="hero">
                 <h1 class="hero-title" >Alexa Rise</h1>
                 <p class="hero-text">
                     Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise
                 </p>
                 <button class="button">Hire me</button>
             </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span>Skills</span>
-            </h2>
+        </section>
+        <section class="section skills-container" id="skills">
+            <div class="container-title">
+                <h2 class="section-title">Skills</h2>
+            </div>
             <div class="skills-items">
                 <div class="skill-item">
-                    <div class="skill-title">Digital photography</div>
-                    <div class="skill-text">
+                    <h3 class="skill-title">Digital photography</h3>
+                    <p class="skill-text">
                         High-quality photos in the studio and on the nature
-                    </div>
+                    </p>
                 </div>
                 <div class="skill-item">
                     <div class="skill-title">Video shooting</div>
@@ -90,45 +88,52 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <h2 class="section-title">
-                <span>Portfolio</span>
-            </h2>
+        </section>
+        <section class="section portfolio-container" id="portfolio">
+            <div class="container-title">
+                <h2 class="section-title">Portfolio</h2>
+            </div>
             <div class="portfolio-buttons">
-                <button class="button portfolio-button">Winter</button>
-                <button class="button portfolio-button">Spring</button>
-                <button class="button portfolio-button">Summer</button>
-                <button class="button portfolio-button portfolio-button-active">Autumn</button>
+                <button class="portfolio-button">Winter</button>
+                <button class="portfolio-button">Spring</button>
+                <button class="portfolio-button">Summer</button>
+                <button class="portfolio-button portfolio-button-active">Autumn</button>
             </div>
             <div class="portfolio-items">
-                <img src="./assets/img/autumn/1.jpg" alt="portfolio image" class="portfolio-img" />
-                <img src="./assets/img/autumn/2.jpg" alt="portfolio image" class="portfolio-img" />
-                <img src="./assets/img/autumn/3.jpg" alt="portfolio image" class="portfolio-img" />
-                <img src="./assets/img/autumn/4.jpg" alt="portfolio image" class="portfolio-img" />
-                <img src="./assets/img/autumn/5.jpg" alt="portfolio image" class="portfolio-img" />
-                <img src="./assets/img/autumn/6.jpg" alt="portfolio image" class="portfolio-img" />
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/1.jpg" alt="portfolio image"/>
+                </div>
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/2.jpg" alt="portfolio image"/>
+                </div>
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/3.jpg" alt="portfolio image"/>
+                </div>
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/4.jpg" alt="portfolio image"/>
+                </div>
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/5.jpg" alt="portfolio image"/>
+                </div>
+                <div class="portfolio-item">
+                    <img class="portfolio-img" src="./assets/img/autumn/6.jpg" alt="portfolio image"/>
+                </div>
             </div>
-        </div>
-    </section>
-    <section class="video" id="video">
-        <div class="container">
-            <h2 class="section-title">
-                <span>Video</span>
-            </h2>
+        </section>
+        <section class="section video-container" id="video">
+            <div class="container-title">
+                <h2 class="section-title">Video</h2>
+            </div>
             <div class="video-player">
-                <div class="video-bg"></div>
+                <img class="video-player-image" src="assets/img/video-bg.jpg" alt="Video player">
+                <img class="video-player-image-mobile" src="assets/img/video-bg-mobile.jpg" alt="Video player mobile">
                 <button class="play-button"></button>
             </div>
-        </div>
-    </section>
-    <section class="price" id="price">
-        <div class="container">
-            <h2 class="section-title">
-                <span>Price</span>
-            </h2>
+        </section>
+        <section class="section price-container" id="price">
+            <div class="container-title">
+                <h2 class="section-title">Price</h2>
+            </div>
             <div class="price-items">
                 <div class="price-item">
                     <h3 class="price-title">Standard</h3>
@@ -167,28 +172,32 @@
                     <button class="button price-button">Order shooting</button>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="contacts" id="contacts">
-        <div class="container">
-            <div class="contacts-container">
+        </section>
+        <section class="section contacts-container" id="contacts">
+            <form class="contacts" action="#contacts">
                 <h2 class="contacts-title">Contact me</h2>
                 <input type="email" placeholder="E-mail" />
                 <input type="tel" placeholder="Phone" />
                 <textarea placeholder="Message"></textarea>
                 <button class="button contacts-button">Send message</button>
-            </div>
-        </div>
-    </section>
+            </form>
+        </section>
+    </div>
 </main>
 <footer class="footer">
     <div class="container footer-container">
         <div class="footer-data">
-            <p class="copyright">©</p>
-            <p class="year">2022</p>
-            <a class="github-username" href="https://github.com/andreyfits" target="_blank" rel="noopener noreferrer">andreyfits</a>
+            <span class="copyright">©</span>
+            <span class="year">2022</span>
+            <span class="github">
+                <a class="link" href="https://github.com/andreyfits" target="_blank" rel="noopener noreferrer">andreyfits</a>
+            </span>
         </div>
-        <a href="https://rs.school/js-stage0/" target="_blank" class="rss">Rolling Scopes School</a>
+        <div class="rss">
+            <span class="rss-link">
+                <a class="link" href="https://rs.school/js-stage0/" target="_blank">Rolling Scopes School</a>
+            </span>
+        </div>
         <ul class="social-list">
             <li class="social-item instagram"><a href="#"></a></li>
             <li class="social-item facebook"><a href="#"></a></li>
