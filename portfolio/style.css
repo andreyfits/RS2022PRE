@@ -563,7 +563,7 @@ textarea:focus {
     filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
 
-/*========== MEDIA QUERIES ==========*/
+/*==================== MEDIA QUERIES ====================*/
 
 @media (max-width: 920px) {
     .hero .container {
@@ -599,102 +599,113 @@ textarea:focus {
 }
 
 @media (max-width: 768px) {
-    .toggle {
-        display: flex;
+    :root {
+        --font-h1: normal 400 32px/64px 'Merriweather', serif;
+        --font-h2: normal 700 32px/40.22px 'Merriweather', serif;
+        --font-h3-skills: normal 700 20px/40px 'Inter', sans-serif;
+        --font-text: normal 400 20px/24.2px 'Inter', sans-serif;
+        --font-text-skills: normal 700 18px/21.78px 'Inter', sans-serif;
+        --font-menu: normal 400 35px/72.55px 'Inter', sans-serif;
+    }
+
+    .header {
+        background: url('assets/img/header-bg-mobile.jpg') no-repeat center 0;
     }
 
     .header-container {
-        padding-right: 64px;
-        padding-left: 60px;
-        background-position: -5px -30px;
-        background-size: auto 620px;
+        padding: 20px 60px;
     }
 
-    .switch-lang {
-        right: 134px;
-    }
-
-    .lang:nth-child(3) {
-        padding-left: 14px;
-    }
-
-    .show {
-        position: fixed;
+    .nav {
+        position: absolute;
+        overflow: hidden;
+        visibility: hidden;
         top: 0;
         right: 0;
-        bottom: 0;
-        left: 0;
-        background-color: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-    }
-
-    .show.hide {
-        display: none;
+        margin: 0;
+        padding: 0;
+        z-index: 20;
+        width: 0;
+        height: 100%;
+        background-color: var(--color-black);
+        transition: all var(--slower) ease-in-out;
     }
 
     .nav-list {
-        position: fixed;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        top: 0;
-        right: -620px;
-        width: 620px;
-        background-color: var(--color-black);
-        transition: var(--slower);
-    }
-
-    .nav-item:nth-child(1) {
-        margin-top: 134px;
-    }
-
-    .nav-list.open {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
+        flex-flow: column;
         align-items: flex-start;
-        justify-content: flex-start;
-        top: 0;
-        right: 0;
-        z-index: 2;
-        width: 620px;
-        height: 1024px;
-        background-color: var(--color-black);
-        transition: var(--slower);
-    }
-
-    .nav-link {
+        justify-content: flex-end;
+        gap: 16px;
         font: var(--font-menu);
+        padding-top: 135px;
         padding-left: 127px;
-        padding-bottom: 16px;
-        line-height: 73px;
     }
 
-    .hero .container {
-        height: 590px;
-        background-position: -5px -120px;
-        background-size: auto 620px;
-        padding-left: 60px;
-        padding-top: 78px;
+    .nav.open {
+        visibility: visible;
+        width: 620px;
     }
 
-    .hero-content {
-        padding-left: 0;
+    body.open {
+        overflow: hidden;
     }
 
-    .hero-content {
-        padding-left: 0;
+    .blackout {
+        display: block;
+        position: fixed;
+        visibility: hidden;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
     }
 
-    .hero-title {
-        font-size: 32px;
-        line-height: 64px;
-        padding-bottom: 20px;
+    .nav.open ~ .blackout {
+        visibility: visible;
+        opacity: 1;
+        transition: all var(--slower) ease-in-out;
     }
 
-    .hero-text {
-        max-width: 390px;
-        padding-bottom: 60px;
-        line-height: 24px;
+    .switch-lang {
+        padding-right: 30px;
+    }
+
+    .toggle {
+        position: relative;
+        display: flex;
+        flex-flow: column;
+        z-index: 30;
+    }
+
+    .line {
+        display: block;
+        width: 50px;
+        height: 3px;
+        margin: auto auto;
+        background-color: var(--color-white);
+        transition: all var(--slower) ease-in-out;
+    }
+
+    .toggle:hover {
+        cursor: pointer;
+    }
+
+    .toggle.open .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .toggle.open .line:nth-child(1) {
+        transform: translate(-9px, 17px) rotate(45deg);
+        width: 69px;
+        height: 2px;
+    }
+
+    .toggle.open .line:nth-child(3) {
+        transform: translate(-9px, -17px) rotate(-45deg);
+        width: 69px;
+        height: 2px;
     }
 }

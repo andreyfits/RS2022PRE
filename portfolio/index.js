@@ -1,22 +1,20 @@
-console.log(
-    "Вёрстка валидная +10\n" +
-    "Вёрстка семантическая +20\n" +
-    "Вёрстка соответствует макету +48\n" +
-    "Требования к css + 12\n" +
-    "Интерактивность, реализуемая через css +20\n"
-)
-
 const toggle = document.querySelector('.toggle');
-const navMenu = document.querySelector('.nav-list');
-const navLinks = document.querySelectorAll('.nav-link');
-const show = document.querySelector('.show');
+const navMenu = document.querySelector('nav');
+const blackout = document.querySelector('body');
 
-const toggleMenu = (event) => {
+function toggleMenu() {
     toggle.classList.toggle('open');
     navMenu.classList.toggle('open');
-    show.classList.toggle('hide');
+    blackout.classList.toggle('open');
 }
 
 toggle.addEventListener('click', toggleMenu)
+navMenu.addEventListener('click', closeMenu)
 
-navLinks.forEach((element) => element.addEventListener('click', toggleMenu));
+function closeMenu(event) {
+    if (event.target.classList.contains('nav-link')) {
+        toggle.classList.remove('open');
+        navMenu.classList.remove('open');
+        blackout.classList.remove('open');
+    }
+}
