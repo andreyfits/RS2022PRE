@@ -13,12 +13,12 @@
     --font-menu: normal 400 20px/50px 'Inter', sans-serif;
     --font-footer: normal 400 20px/50px 'Inter', sans-serif;
     --font-lang: normal 700 20px/50px 'Inter', sans-serif;
-    --font-menu-adaptive: 400 35px 'Inter', sans-serif;
-    --font-text: normal 400 18px/36px 'Inter', sans-serif;
+    --font-text: normal 400 20px/40px 'Inter', sans-serif;
+    --font-text-skills: normal 400 18px/36px 'Inter', sans-serif;
+    --font-text-price: normal 400 18px/36px 'Inter', sans-serif;
 
     --font-h1: normal 700 60px/120px 'Merriweather', serif;
     --font-h2: normal 700 40px/80px 'Merriweather', serif;
-    --font-h2-adaptive: normal 700 32px/40px 'Merriweather', serif;
     --font-h3-price: normal 700 28px/56px 'Merriweather', serif;
     --font-h3-cost: normal 700 24px/48px 'Merriweather', serif;
     --font-h3-skills: normal 700 20px/40px 'Inter', sans-serif;
@@ -222,7 +222,7 @@ body {
     margin-left: 21px;
 }
 
-.skills-items {
+.skill-items {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -266,7 +266,7 @@ body {
 }
 
 .skill-text {
-    font: var(--font-text);
+    font: var(--font-text-skills);
     text-align: center;
     padding: 0 20px;
 }
@@ -368,7 +368,6 @@ body {
     border: 3px solid var(--color-gold);
 }
 
-
 .price-title {
     font: var(--font-h3-price);
     padding-bottom: 20px;
@@ -383,7 +382,7 @@ body {
 }
 
 .price-description {
-    font: var(--font-text);
+    font: var(--font-text-price);
     padding-bottom: 39px;
 }
 
@@ -392,37 +391,8 @@ body {
     text-align: center;
 }
 
-.price-item-button {
-    align-self: center;
-}
-
-.price-title {
-    font: var(--font-h3-price);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.price-cost {
-    font: var(--font-h3-cost);
-    color: var(--color-gold);
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.price-description {
-    margin-bottom: 40px;
-}
-
-.price-description span {
-    display: block;
-    font: var(--font-text);
-    text-align: center;
-}
-
 .price-button {
-    display: block;
-    margin: 0 auto;
-    transition: var(--slower);
+    align-self: center;
 }
 
 /*==================== CONTACTS ====================*/
@@ -452,7 +422,7 @@ input[type='email'],
 input[type='tel'] {
     height: 50px;
     font: inherit;
-    padding: 2px 0 0 3px;
+    padding-top: 1px;
     border: 2px solid var(--color-gold);
     outline: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -471,7 +441,7 @@ textarea {
     height: 100px;
     font: inherit;
     margin-bottom: 10px;
-    padding: 2px 0 0 2px;
+    padding-top: 3px;
     border: 2px solid var(--color-gold);
     outline: 0;
     background: rgba(0, 0, 0, 0.5);
@@ -491,7 +461,7 @@ textarea:focus {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font: var(--font-text);
+    font: var(--font-footer);
     background: var(--color-black);
     color: var(--color-white);
 }
@@ -526,7 +496,6 @@ textarea:focus {
 .social-list {
     display: flex;
     gap: 20px;
-    list-style: none;
 }
 
 .instagram {
@@ -570,7 +539,8 @@ textarea:focus {
         --font-h2: normal 700 32px/40.22px 'Merriweather', serif;
         --font-h3-skills: normal 700 20px/40px 'Inter', sans-serif;
         --font-text: normal 400 20px/24.2px 'Inter', sans-serif;
-        --font-text-skills: normal 700 18px/21.78px 'Inter', sans-serif;
+        --font-footer: normal 400 20px/24.2px 'Inter', sans-serif;
+        --font-text-skills: normal 400 18px/21.78px 'Inter', sans-serif;
         --font-menu: normal 400 35px/72.55px 'Inter', sans-serif;
     }
 
@@ -580,7 +550,7 @@ textarea:focus {
     }
 
     .header-container {
-        padding: 20px 60px;
+        padding: 20px 64px 20px 60px;
     }
 
     .nav {
@@ -717,7 +687,7 @@ textarea:focus {
     }
 
     .portfolio-container {
-        padding-top: 160px;
+        padding-top: 161.5px;
     }
 
     .portfolio-buttons {
@@ -764,8 +734,9 @@ textarea:focus {
 
     .contacts-title {
         text-align: center;
-        padding-bottom: 35px;
+        padding: 62px 0 31px 0;
     }
+
 
     .contacts-button {
         align-self: center;
