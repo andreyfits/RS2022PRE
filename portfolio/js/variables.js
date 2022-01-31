@@ -3,7 +3,7 @@ const variable = {
     'navMenu': document.querySelector('.nav'),
     'toggle': document.querySelector('.toggle'),
     'switch-lang': document.querySelector('.switch-lang'),
-    'lng': document.querySelectorAll('.lng'),
+    'language': document.querySelectorAll('.language'),
     'section-title': document.querySelectorAll('.section-title'),
     'skills-container': document.querySelector('.skills-container'),
     'portfolio-container': document.querySelector('.portfolio-container'),

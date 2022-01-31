@@ -119,10 +119,13 @@ body {
     transition: var(--slower);
 }
 
-.en:hover,
 .en.active,
-.ru:hover,
 .ru.active {
+    color: var(--color-gold);
+}
+
+.en:hover,
+.ru:hover {
     color: var(--color-gold);
 }
 

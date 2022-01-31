@@ -8,18 +8,22 @@ let requirements = `Итоговая оценка: 25/85.
 
 console.log(requirements);
 
-import variable from './assets/js/variables.js';
+import variable from './js/variables.js';
+import i18Obj from './js/translate.js';
 
 /*======================================== LOCAL STORAGE ========================================*/
 let timeOfYear = 'autumn';
+let language = 'en';
 
 const setLocalStorage = () => {
     localStorage.setItem('season', timeOfYear);
+    localStorage.setItem('lang', language);
 };
 
 const getLocalStorage = () => {
-    if (localStorage.getItem('season')) {
+    if (localStorage.getItem('season') && localStorage.getItem('lang')) {
         changeImage(localStorage.getItem('season'));
+        getTranslate(localStorage.getItem('lang'));
     } else {
         setLocalStorage();
         getLocalStorage();
@@ -74,7 +78,23 @@ const preloadImages = (season) => {
     }
 };
 
+/*======================================== TRANSLATE PAGE ========================================*/
+const getTranslate = (lang) => {
+    variable['data-i18n'].forEach(element => element.textContent = i18Obj[lang][element.dataset.i18n]);
+    variable['data-form'].forEach(element => element.placeholder = i18Obj[lang][element.dataset.form]);
+    makeActive(variable['language'], lang, 'lang');
+    language = lang;
+};
+
+const makeTranslate = (event) => {
+    if (event.target.dataset.lang) {
+        getTranslate(event.target.dataset.lang);
+    }
+};
+
+/*======================================== CLICK EVENT ========================================*/
+variable['navMenu'].addEventListener('click', closeMenu);
+variable['switch-lang'].addEventListener('click', makeTranslate);
+variable['toggle'].addEventListener('click', toggleMenu);
 variable['seasons'].forEach(el => preloadImages(el));
 variable['portfolio-buttons'].addEventListener('click', changeImageEvent);
-variable['toggle'].addEventListener('click', toggleMenu);
-variable['navMenu'].addEventListener('click', closeMenu);
