@@ -14,20 +14,25 @@ import i18Obj from './js/translate.js';
 /*======================================== LOCAL STORAGE ========================================*/
 let timeOfYear = 'autumn';
 let language = 'en';
+let theme = 'dark';
 
 const setLocalStorage = () => {
     localStorage.setItem('season', timeOfYear);
     localStorage.setItem('lang', language);
+    localStorage.setItem('theme', theme);
 };
 
 const getLocalStorage = () => {
-    if (localStorage.getItem('season') && localStorage.getItem('lang')) {
+    if (localStorage.getItem('season') && localStorage.getItem('lang') && localStorage.getItem('theme')) {
         changeImage(localStorage.getItem('season'));
         getTranslate(localStorage.getItem('lang'));
+        changeTheme(localStorage.getItem('theme'));
     } else {
         setLocalStorage();
         getLocalStorage();
     }
+
+    variable['blackout'].style.display = 'flex';
 };
 
 window.addEventListener('load', getLocalStorage);
@@ -38,6 +43,7 @@ function toggleMenu() {
     variable['toggle'].classList.toggle('open');
     variable['navMenu'].classList.toggle('open');
     variable['blackout'].classList.toggle('open');
+    lightToDark();
 }
 
 function closeMenu(event) {
@@ -45,6 +51,7 @@ function closeMenu(event) {
         variable['toggle'].classList.remove('open');
         variable['navMenu'].classList.remove('open');
         variable['blackout'].classList.remove('open');
+        lightToDark();
     }
 }
 
@@ -92,9 +99,35 @@ const makeTranslate = (event) => {
     }
 };
 
+/*======================================== CHANGE THEME ========================================*/
+const changeTheme = (color) => {
+    (color === 'light')
+        ? variable['data-theme'].forEach(element => element.classList.add('light'))
+        : variable['data-theme'].forEach(element => element.classList.remove('light'));
+    theme = color;
+};
+
+const changeThemeOnClick = (event) => {
+    (event.target.classList.contains('light'))
+        ? changeTheme('dark')
+        : changeTheme('light');
+};
+
+function lightToDark() {
+    if (variable['toggle'].classList.contains('light')) {
+        variable['blackout'].classList.toggle('light');
+        variable['skills-container'].classList.toggle('light');
+        variable['portfolio-container'].classList.toggle('light');
+        variable['section-title'].forEach(element => element.classList.toggle('light'));
+        variable['portfolio-button'].forEach(element => element.classList.toggle('light'));
+    }
+}
+
+
 /*======================================== CLICK EVENT ========================================*/
 variable['navMenu'].addEventListener('click', closeMenu);
 variable['switch-lang'].addEventListener('click', makeTranslate);
+variable['theme-switch'].addEventListener('click', changeThemeOnClick);
 variable['toggle'].addEventListener('click', toggleMenu);
-variable['seasons'].forEach(el => preloadImages(el));
+variable['seasons'].forEach(element => preloadImages(element));
 variable['portfolio-buttons'].addEventListener('click', changeImageEvent);

@@ -14,6 +14,6 @@ const variable = {
     'data-theme': document.querySelectorAll('[data-theme]'),
     'data-form': document.querySelectorAll('[data-form]'),
     'data-i18n': document.querySelectorAll('[data-i18n]'),
-    'theme-change': document.querySelector('.theme-change'),
+    'theme-switch': document.querySelector('.theme-switch'),
 }
 export default variable;
