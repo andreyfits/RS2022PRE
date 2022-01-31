@@ -112,13 +112,17 @@ body {
     cursor: pointer;
 }
 
-.ru:hover,
-.en:hover {
-    color: var(--color-gold);
+.ru,
+.en {
+    color: var(--color-white);
+    cursor: pointer;
+    transition: var(--slower);
 }
 
-.lang-active,
-.lang-active:hover {
+.en:hover,
+.en.active,
+.ru:hover,
+.ru.active {
     color: var(--color-gold);
 }
 
@@ -162,10 +166,6 @@ body {
     background-color: var(--color-gold);
     cursor: pointer;
     transition: var(--slower);
-}
-
-.button:hover {
-    color: var(--color-white);
 }
 
 .section {
@@ -291,17 +291,14 @@ body {
     transition: var(--slower);
 }
 
+.button:hover,
 .portfolio-button:hover {
     color: var(--color-white);
 }
 
-.portfolio-button-active {
+.portfolio-button.active {
     color: var(--color-black);
-    background-color: var(--color-gold);
-}
-
-.portfolio-button-active:hover {
-    color: var(--color-white);
+    background: var(--color-gold);
 }
 
 .portfolio-items {
