@@ -11,7 +11,7 @@
     --big-line-height: 2.5;
 
     /*==================== TRANSITION ====================*/
-    --slower: .5s;
+    --normal: 1s;
 }
 
 /*==================== BASE ====================*/
@@ -56,7 +56,7 @@ body {
     margin-right: auto;
     background: url("./assets/svg/logo.svg") no-repeat;
     background-size: contain;
-    transition: var(--slower);
+    transition: all var(--normal) ease-in-out;
 }
 
 .logo:hover {
@@ -74,7 +74,7 @@ body {
     color: var(--color-white);
     text-decoration: none;
     cursor: pointer;
-    transition: var(--slower);
+    transition: all var(--normal) ease-in-out;
 }
 
 .nav-link:hover {
@@ -87,26 +87,31 @@ body {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 120px);
-    min-height: 280px;
+    min-height: 260px;
     background-size: cover;
     background-image: url("./assets/img/forest.jpg");
+    transition: all var(--normal) ease-in-out;
 }
 
 .play-button {
-    width: 160px;
-    height: 160px;
+    height: 140px;
+    width: 140px;
     border: 0;
-    background-size: contain;
-    background-image: url("./assets/svg/play.svg");
-    background-color: transparent;
+    background: url("./assets/svg/play.svg") no-repeat;
+    background-size: 140px 140px;
     cursor: pointer;
-    transition: var(--slower);
-}
-
-.play-button:focus {
-    border: 0;
+    transition: all var(--normal) ease-in-out;
 }
 
 .play-button:hover {
-    filter: brightness(.85);
+    filter: brightness(83%);
+}
+
+.active {
+    color: var(--color-gold);
+}
+
+.logo.active,
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
 }
