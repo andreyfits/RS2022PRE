@@ -42,10 +42,13 @@ body {
 }
 
 .header-container {
+    padding: 5px 20px;
+}
+
+.nav-list {
     display: flex;
     align-items: center;
-    padding: 5px 20px;
-    color: var(--color-white);
+    gap: 40px;
 }
 
 .logo {
@@ -57,17 +60,7 @@ body {
     transition: all var(--slower) ease-in-out;
 }
 
-.logo:hover {
-    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
-}
-
-.nav-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
-}
-
-.nav-link {
+.nav-item {
     font: var(--font);
     color: var(--color-white);
     text-decoration: none;
@@ -83,7 +76,7 @@ body {
     height: calc(100vh - 120px);
     min-height: 260px;
     background-size: cover;
-    background-image: url("./assets/img/forest.jpg");
+    background: url("./assets/img/forest.jpg") center;
     transition: all var(--slower) ease-in-out;
 }
 
@@ -94,6 +87,12 @@ body {
     background: url("./assets/svg/play.svg") no-repeat;
     background-size: 140px 140px;
     cursor: pointer;
+    transition: all var(--slower) ease-in-out;
+}
+
+.pause {
+    background: url('assets/svg/pause.svg') no-repeat;
+    background-size: 140px 140px;
     transition: all var(--slower) ease-in-out;
 }
 
@@ -123,7 +122,7 @@ body {
     transition: all var(--slower) ease-in-out;
 }
 
-.nav-link:hover,
+.nav-item:hover,
 .link:hover {
     color: var(--color-gold);
 }
