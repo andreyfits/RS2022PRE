@@ -1,0 +1,82 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*==================== COLORS ====================*/
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #bdae82;
+
+    /*==================== FONT AND TYPOGRAPHY ====================*/
+    --font: normal 400 20px/40px 'Roboto', sans-serif;
+
+    --big-line-height: 2.5;
+
+    /*==================== TRANSITION ====================*/
+    --slower: .5s;
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    font: var(--font);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/*==================== CLASS CSS ====================*/
+.container {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    color: var(--color-white);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+    background: url("./assets/svg/logo.svg") no-repeat;
+    background-size: contain;
+    transition: var(--slower);
+}
+
+.logo:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-link {
+    font: var(--font);
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+.nav-link:hover {
+    color: var(--color-gold);
+}
