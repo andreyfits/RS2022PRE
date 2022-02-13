@@ -1,0 +1,100 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*==================== COLORS ====================*/
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #bdae82;
+
+    /*==================== FONT AND TYPOGRAPHY ====================*/
+    --font: normal 400 20px/40px 'Roboto', sans-serif;
+
+    /*==================== TRANSITION ====================*/
+    --slower: .7s;
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    font: var(--font);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/*==================== CLASS CSS ====================*/
+.container {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: var(--color-white);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url("./assets/svg/logo.svg") no-repeat;
+    fill: var(--color-white);
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+.title {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+.lang {
+    width: 80px;
+    padding: 10px 15px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: #22c7a7;
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #1a344d;
+    transition: var(--slower);
+}
+
+.lang:hover {
+    background: var(--color-white);
+    box-shadow: 0 2px 10px 5px #1abc9c;
+    color: var(--color-black);
+}
+
+.lang:focus {
+    outline: 0;
+}
+
+/*==================== MAIN ====================*/
+
+
+/*==================== FOOTER ====================*/
