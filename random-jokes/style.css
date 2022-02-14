@@ -165,3 +165,46 @@ body {
 .rss-logo:hover {
     filter: brightness(0) saturate(100%) invert(94%) sepia(39%) saturate(4625%) hue-rotate(87deg) brightness(88%) contrast(74%);
 }
+
+/*==================== MEDIA QUERIES ====================*/
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 40px 0 35px;
+        gap: 20px;
+    }
+
+    .footer-data {
+        margin: 0;
+    }
+
+    .copyright,
+    .year,
+    .github,
+    .rss-logo {
+        line-height: 0;
+    }
+
+    .rss-logo {
+        padding: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        font-size: 18px;
+        width: 280px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button {
+        font-size: 16px;
+        width: 260px;
+    }
+}
