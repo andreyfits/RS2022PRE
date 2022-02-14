@@ -4,6 +4,7 @@
     --color-black: #000;
     --color-white: #fff;
     --color-gold: #bdae82;
+    --color-light-green: #22c7a7;
 
     /*==================== FONT AND TYPOGRAPHY ====================*/
     --font: normal 400 20px/40px 'Roboto', sans-serif;
@@ -68,7 +69,7 @@ body {
 }
 
 .title:hover {
-    color: #22c7a7;
+    color: var(--color-light-green);
 }
 
 .lang,
@@ -79,7 +80,7 @@ body {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 3px;
-    background-color: #22c7a7;
+    background-color: var(--color-light-green);
     color: var(--color-white);
     border: none;
     border-radius: 4px;
@@ -113,3 +114,42 @@ body {
 }
 
 /*==================== FOOTER ====================*/
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    gap: 75px;
+}
+
+.footer-data {
+    display: flex;
+    align-self: center;
+    font: var(--font);
+    margin-right: auto;
+    gap: 20px;
+}
+
+.link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--slower) ease-in-out;
+}
+
+.link:hover {
+    color: var(--color-light-green);
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background: url("./assets/svg/rss.svg") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+
+.logo:hover,
+.rss-logo:hover {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(39%) saturate(4625%) hue-rotate(87deg) brightness(88%) contrast(74%);
+}
