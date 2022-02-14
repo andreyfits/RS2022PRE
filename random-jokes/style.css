@@ -67,7 +67,12 @@ body {
     transition: var(--slower);
 }
 
-.lang {
+.title:hover {
+    color: #22c7a7;
+}
+
+.lang,
+.button {
     width: 80px;
     padding: 10px 15px;
     font-size: 20px;
@@ -84,7 +89,8 @@ body {
     transition: var(--slower);
 }
 
-.lang:hover {
+.lang:hover,
+.button:hover {
     background: var(--color-white);
     box-shadow: 0 2px 10px 5px #1abc9c;
     color: var(--color-black);
@@ -95,6 +101,15 @@ body {
 }
 
 /*==================== MAIN ====================*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
 
+.button {
+    width: 340px;
+}
 
 /*==================== FOOTER ====================*/
