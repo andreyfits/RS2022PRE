@@ -1,0 +1,157 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*==================== COLORS ====================*/
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #bdae82;
+
+    /*==================== FONT AND TYPOGRAPHY ====================*/
+    --font: normal 400 20px/40px 'Roboto', sans-serif;
+
+    /*==================== TRANSITION ====================*/
+    --slower: .7s;
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    font: var(--font);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/*==================== CLASS CSS ====================*/
+.container {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    padding: 5px 20px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: auto;
+    background: url("./assets/svg/logo.svg") no-repeat;
+    background-size: contain;
+    transition: all var(--slower) ease-in-out;
+}
+
+.nav-item {
+    font: var(--font);
+    color: var(--color-white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all var(--slower) ease-in-out;
+}
+
+/*==================== MAIN ====================*/
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 120px);
+    min-height: 260px;
+    background-size: cover;
+    background: url("./assets/img/forest.jpg") center;
+    transition: all var(--slower) ease-in-out;
+}
+
+.play-button {
+    height: 140px;
+    width: 140px;
+    border: 0;
+    background: url("./assets/svg/play.svg") no-repeat;
+    background-size: 140px 140px;
+    cursor: pointer;
+    transition: all var(--slower) ease-in-out;
+}
+
+.pause {
+    background: url('assets/svg/pause.svg') no-repeat;
+    background-size: 140px 140px;
+    transition: all var(--slower) ease-in-out;
+}
+
+.play-button:hover {
+    filter: brightness(83%);
+}
+
+/*==================== FOOTER ====================*/
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 20px;
+    gap: 75px;
+}
+
+.footer-data {
+    display: flex;
+    align-self: center;
+    font: var(--font);
+    margin-right: auto;
+    gap: 20px;
+}
+
+.link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--slower) ease-in-out;
+}
+
+.nav-item:hover,
+.link:hover {
+    color: var(--color-gold);
+}
+
+.download {
+    width: 50px;
+    height: 50px;
+    background: url("./assets/svg/download.svg") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: all var(--slower) ease-in-out;
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background: url("./assets/svg/rss.svg") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: all var(--slower) ease-in-out;
+}
+
+.active {
+    color: var(--color-gold);
+}
+
+.logo.active,
+.logo:hover,
+.rss-logo:hover,
+.download:hover {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%) contrast(87%);
+}
