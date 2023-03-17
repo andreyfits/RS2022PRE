@@ -1,0 +1,288 @@
+:root {
+    --color-black: #000000;
+    --color-nav: #2ea920;
+    --color-white: #ffffff;
+    --main-background: #d9d9d9;
+    --transition-slow: var(--transition-slow);
+    --transition-normal: var(--transition-normal);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header,
+.footer {
+    background: var(--color-black);
+    margin-bottom: auto;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: 30px;
+    height: 70px;
+    padding: 5px 20px;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url('assets/img/tic-tac-toe.png') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--transition-slow);
+}
+
+.nav {
+    width: 100%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-item {
+    font: normal normal 20px/40px 'Poppins', 'Roboto', Verdana, sans-serif;
+    text-decoration: none;
+    color: var(--color-white);
+    transition: all var(--transition-slow);
+    cursor: pointer;
+}
+
+.nav-item:last-child {
+    margin-left: auto;
+}
+
+.nav-item:hover {
+    color: var(--color-nav);
+}
+
+.main {
+    height: calc(100vh - 140px);
+    background: var(--main-background);
+}
+
+.main-container {
+    height: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.game-over {
+    margin: auto;
+    padding: 10px;
+    height: 200px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--color-nav);
+    border-radius: 10px;
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.game-over.show {
+    opacity: 1;
+    visibility: visible;
+    transition: all var(--transition-normal);
+}
+
+.congrats {
+    padding: 5px 10px;
+    font: normal normal 30px/40px 'Poppins', 'Roboto', Verdana, sans-serif;
+    color: var(--color-white);
+    text-align: center;
+}
+
+.moves {
+    padding: 5px;
+    font: normal normal 20px/30px 'Poppins', 'Roboto', Verdana, sans-serif;
+    text-align: center;
+}
+
+.btn-ok {
+    padding: 10px 5px;
+    font: normal bold 20px/30px 'Poppins', 'Roboto', Verdana, sans-serif;
+    text-transform: uppercase;
+    align-self: flex-end;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: var(--transition-normal);
+}
+
+.btn-ok:hover {
+    background: var(--main-background);
+}
+
+.record-table {
+    padding: 10px 50px;
+    font: normal normal 20px/30px 'Poppins', 'Roboto', Verdana, sans-serif;
+    visibility: hidden;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    z-index: 20;
+    background: var(--color-nav);
+    opacity: 0;
+    overflow: hidden;
+    transition: all var(--transition-normal);
+}
+
+.record-line {
+    text-align: right;
+}
+
+.record-title {
+    padding-bottom: 20px;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.record-table.open {
+    font-weight: normal;
+    opacity: 1;
+    visibility: visible;
+}
+
+.shadow {
+    width: 100%;
+    height: calc(100% - 140px);
+    display: block;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+.record-table.open ~ .shadow,
+.game-over.show ~ .shadow {
+    visibility: visible;
+    opacity: 1;
+    transition: all var(--transition-normal);
+}
+
+.cell {
+    width: 33.333%;
+    height: 100px;
+    background: #ffeb9b;
+    border: 2px solid black;
+}
+
+.img-cell {
+    width: 100%;
+}
+
+.footer-container {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-data {
+    margin-right: auto;
+    display: flex;
+    align-self: center;
+    gap: 20px;
+    color: var(--color-white);
+    font: normal normal 20px/40px 'Poppins', 'Roboto', Verdana, sans-serif;
+}
+
+.github-link {
+    text-decoration: none;
+    color: var(--color-white);
+    transition: var(--transition-slow);
+}
+
+.github-link:hover {
+    color: var(--color-nav);
+}
+
+.rss-logo {
+    width: 120px;
+    height: 50px;
+    background: url('assets/svg/rss.svg') no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--transition-slow);
+}
+
+.logo:hover,
+.rss-logo:hover {
+    filter: invert(40%) sepia(99%) saturate(769%) hue-rotate(77deg) brightness(103%) contrast(78%);
+}
+
+@media (max-width: 450px) {
+    .header-container {
+        height: 80px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+
+    .nav-item:last-child {
+        margin-left: 0;
+    }
+
+    .main {
+        height: calc(100vh - 180px);
+    }
+
+    .record-table {
+        top: 80px;
+        padding: 10px 40px;
+    }
+
+    .shadow {
+        height: calc(100% - 180px);
+        top: 80px;
+    }
+
+    .footer-container {
+        height: 100px;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer-data {
+        margin-right: 0;
+    }
+}
