@@ -1,0 +1,210 @@
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*==================== COLORS ====================*/
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #bdae82;
+    --color-light-green: #22c7a7;
+
+    /*==================== FONT AND TYPOGRAPHY ====================*/
+    --font: normal 400 20px/40px 'Roboto', sans-serif;
+
+    /*==================== TRANSITION ====================*/
+    --slower: .7s;
+}
+
+/*==================== BASE ====================*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    font: var(--font);
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/*==================== CLASS CSS ====================*/
+.container {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: var(--color-white);
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    background: url("./assets/svg/logo.svg") no-repeat;
+    fill: var(--color-white);
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+.title {
+    color: var(--color-white);
+    font-weight: 700;
+    font-size: 32px;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+.title:hover {
+    color: var(--color-light-green);
+}
+
+.lang,
+.button {
+    width: 80px;
+    padding: 10px 15px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background-color: var(--color-light-green);
+    color: var(--color-white);
+    border: none;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 15px #1a344d;
+    transition: var(--slower);
+}
+
+.lang:hover,
+.button:hover {
+    background: var(--color-white);
+    box-shadow: 0 2px 10px 5px #1abc9c;
+    color: var(--color-black);
+}
+
+.lang:focus {
+    outline: 0;
+}
+
+/*==================== MAIN ====================*/
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    background-color: white;
+}
+
+.button {
+    width: 340px;
+}
+
+.quote {
+    width: calc(100% - 40px);
+    max-width: 768px;
+    margin-top: 40px;
+    font-size: 30px;
+    color: var(--color-black);
+    text-align: center;
+}
+
+/*==================== FOOTER ====================*/
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+    gap: 75px;
+}
+
+.footer-data {
+    display: flex;
+    align-self: center;
+    font: var(--font);
+    margin-right: auto;
+    gap: 20px;
+}
+
+.link {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: all var(--slower) ease-in-out;
+}
+
+.link:hover {
+    color: var(--color-light-green);
+}
+
+.rss-logo {
+    width: 135px;
+    height: 50px;
+    background: url("./assets/svg/rss.svg") no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    transition: var(--slower);
+}
+
+
+.logo:hover,
+.rss-logo:hover {
+    filter: brightness(0) saturate(100%) invert(94%) sepia(39%) saturate(4625%) hue-rotate(87deg) brightness(88%) contrast(74%);
+}
+
+/*==================== MEDIA QUERIES ====================*/
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        padding: 40px 0 35px;
+        gap: 20px;
+    }
+
+    .footer-data {
+        margin: 0;
+    }
+
+    .copyright,
+    .year,
+    .github,
+    .rss-logo {
+        line-height: 0;
+    }
+
+    .rss-logo {
+        padding: 0;
+    }
+}
+
+@media (max-width: 425px) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .button {
+        font-size: 18px;
+        width: 280px;
+    }
+}
+
+@media (max-width: 375px) {
+    .button {
+        font-size: 16px;
+        width: 260px;
+    }
+}
